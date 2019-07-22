@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./section/head %>
+</head>
+<body>
+    <header>
+      <% include ./section/header %>  
+    </header>
+    
+    <section id="header" class="jumbotron jumbotron-fluid container text-center mt-3">
+        <h3>Success! Please get your file and spot check</h3>
+        <hr class="my-4">
+        <p>Filename: <%= fname %></p>
+        <a href="<%= rName %>" class="btn btn-primary btn-lg"><i class="far fa-arrow-alt-circle-left"></i> Back</a>
+        <a class="btn btn-success btn-lg" title="Download" href="/files/downloads/<%= fname%>"> Download</a> 
+    </section>
+    
+    <footer>
+      <% include ./section/footer %>
+    </footer>
+</body>
+</html>
