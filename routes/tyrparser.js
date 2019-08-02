@@ -22,12 +22,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', upload, function (req, res, next){
-    console.log(req.file);
+    //console.log(req.file);
     var ff = req.file.originalname;
-    console.log('tyr was here');
+    //console.log('tyr was here');
     
     tyrParser(req.file.filename, function(file){
-        console.log(req)
+        //console.log(req)
         setTimeout(function() {
             res.render('success', { 
                                 fname: file,
