@@ -29,6 +29,7 @@ router.post('/', upload, function (req, res, next){
     tyrParser(req.file.filename, function(file){
         //console.log(req)
         setTimeout(function() {
+            console.log(file);
             res.render('success', { 
                                 fname: file,
                                 rName: '/tyrParser'
