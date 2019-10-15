@@ -5,7 +5,7 @@ var workbook = new Excel.Workbook();
 //var filename = 'files/tyr for parse.xlsx';
 var qtySizeRange = {};  // size and qty storage
 
-function tyrParser(Sourcefilename, callback) {
+async function tyrParser(Sourcefilename, callback) {
     //var datafile = fs.createWriteStream('output/TYR-inventory.csv');
     var file_name = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
     var resultDate = file_name.replace(/[^a-zA-Z0-9 ]/g, "");

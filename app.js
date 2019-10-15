@@ -12,6 +12,7 @@ var stanceRouter = require('./routes/stanceparser');
 var sauconyRouter = require('./routes/sauconyparser');
 var inovRouter = require('./routes/inovparser');
 var batesRouter = require('./routes/batesParser');
+var downloadRouter = require('./routes/downloads');
 
 var app = express();
 
@@ -35,6 +36,7 @@ app.use('/stanceparser', stanceRouter);
 app.use('/sauconyparser', sauconyRouter);
 app.use('/inovparser', inovRouter);
 app.use('/batesparser', batesRouter);
+app.use('/downloads', downloadRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
