@@ -34,7 +34,7 @@ router.post('/', upload, function (req, res, next){
                                 rName: '/tyrParser'
                               });
    });
-        }, 1500);
+        }, 60000);
        
    
 });
