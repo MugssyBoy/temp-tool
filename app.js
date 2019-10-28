@@ -13,6 +13,7 @@ var sauconyRouter = require('./routes/sauconyparser');
 var inovRouter = require('./routes/inovparser');
 var batesRouter = require('./routes/batesParser');
 var downloadRouter = require('./routes/downloads');
+var smokyMountainRouter = require('./routes/smokyMountainRouter');
 
 var app = express();
 
@@ -34,6 +35,8 @@ app.use('/login', login);
 app.use('/tyrparser', tyrRouter);
 app.use('/stanceparser', stanceRouter);
 app.use('/sauconyparser', sauconyRouter);
+app.use('/sauconyparser', sauconyRouter);
+app.use('/smokymountainparser', smokyMountainRouter);
 app.use('/inovparser', inovRouter);
 app.use('/batesparser', batesRouter);
 app.use('/downloads', downloadRouter);
