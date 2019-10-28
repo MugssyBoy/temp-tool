@@ -12,6 +12,9 @@ var stanceRouter = require('./routes/stanceparser');
 var sauconyRouter = require('./routes/sauconyparser');
 var inovRouter = require('./routes/inovparser');
 var batesRouter = require('./routes/batesParser');
+var hellyHansenRouter = require('./routes/hellyHansenRouter');
+var baffinRouter = require('./routes/baffinRouter');
+var rockyRouter = require('./routes/rockyRouter');
 var downloadRouter = require('./routes/downloads');
 var smokyMountainRouter = require('./routes/smokyMountainRouter');
 
@@ -37,8 +40,11 @@ app.use('/stanceparser', stanceRouter);
 app.use('/sauconyparser', sauconyRouter);
 app.use('/sauconyparser', sauconyRouter);
 app.use('/smokymountainparser', smokyMountainRouter);
+app.use('/hellyhansenparser', hellyHansenRouter);
+app.use('/baffinparser', baffinRouter);
 app.use('/inovparser', inovRouter);
 app.use('/batesparser', batesRouter);
+app.use('/rockyparser', rockyRouter);
 app.use('/downloads', downloadRouter);
 
 // catch 404 and forward to error handler
