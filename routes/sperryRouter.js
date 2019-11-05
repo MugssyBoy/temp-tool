@@ -26,13 +26,13 @@ router
         setTimeout(function () {
 
             console.log(req.file);
-            var ff = req.file.originalname;
+            //var ff = req.file.originalname;
             console.log('sperry invoice parser was here');
 
             sperryInvoiceParser(req.file.filename, function (file) {
                 res.render('success', {
                     fname: file,
-                    rName: '/sperryInvoiceParser'
+                    rName: '/api/sperryInvoiceParser'
                 });
             });
         }, 1500);
@@ -45,13 +45,13 @@ router
         setTimeout(function () {
 
             console.log(req.file);
-            var ff = req.file.originalname;
+            //var ff = req.file.originalname;
             console.log('sperry oc parser was here');
     
             sperryOcParser(req.file.filename, function (file) {
                 res.render('success', {
                     fname: file,
-                    rName: '/sperryOcParser'
+                    rName: '/api/sperryOcParser'
                 });
             });
         }, 1500);
