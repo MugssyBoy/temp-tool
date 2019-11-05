@@ -14,9 +14,11 @@ var inovRouter = require('./routes/inovparser');
 var batesRouter = require('./routes/batesParser');
 var hellyHansenRouter = require('./routes/hellyHansenRouter');
 var baffinRouter = require('./routes/baffinRouter');
+var adidasRouter = require('./routes/adidasBulkRouter');
 var rockyRouter = require('./routes/rockyRouter');
 var downloadRouter = require('./routes/downloads');
 var smokyMountainRouter = require('./routes/smokyMountainRouter');
+var sperryRouter = require('./routes/sperryRouter');
 
 var app = express();
 
@@ -44,8 +46,11 @@ app.use('/hellyhansenparser', hellyHansenRouter);
 app.use('/baffinparser', baffinRouter);
 app.use('/inovparser', inovRouter);
 app.use('/batesparser', batesRouter);
+app.use('/adidasbulkparser', adidasRouter);
 app.use('/rockyparser', rockyRouter);
 app.use('/downloads', downloadRouter);
+
+app.use('/api/', sperryRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
