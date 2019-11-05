@@ -8,7 +8,7 @@ var sperryOcParser = require("./../core/parserSperryOC");
 //multers disk storage settings
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './public/files/uploads/');
+        cb(null, '../public/files/uploads/');
     },
     filename: function (req, file, cb) {
         var datetimestamp = Date.now();
